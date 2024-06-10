@@ -73,3 +73,23 @@ This table provides a list of operators, their descriptions, and the versions th
     </tr>
   </tbody>
 </table>
+
+
+## Python Support 🐍
+
+**pgvector** support for Python includes integration with popular frameworks and libraries:
+- Django
+- SQLModel
+- Psycopg 3
+- Psycopg 2
+- asyncpg
+- Peewee
+
+We will explore usage with SQLModel, Django, Psycopg 3, and Psycopg 2.
+
+## Installation 📥
+
+To install **pgvector**, run the following command:
+
+```bash
+pip install pgvector
