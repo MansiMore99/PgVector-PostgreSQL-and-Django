@@ -46,4 +46,30 @@ This table provides a list of operators, their descriptions, and the versions th
       <td>element-wise multiplication</td>
       <td>0.5.0</td>
     </tr>
-    <
+    <tr>
+      <td>||</td>
+      <td>concatenate</td>
+      <td>0.7.0</td>
+    </tr>
+    <tr>
+      <td>&lt;-&gt;</td>
+      <td>Euclidean distance</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;#&gt;</td>
+      <td>negative inner product</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;=&gt;</td>
+      <td>cosine distance</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&lt;+&gt;</td>
+      <td>taxicab distance</td>
+      <td>0.7.0</td>
+    </tr>
+  </tbody>
+</table>
