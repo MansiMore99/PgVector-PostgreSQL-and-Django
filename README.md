@@ -85,11 +85,54 @@ This table provides a list of operators, their descriptions, and the versions th
 - asyncpg
 - Peewee
 
-We will explore usage with SQLModel, Django, Psycopg 3, and Psycopg 2.
-
 ## Installation 📥
 
 To install **pgvector**, run the following command:
 
-```bash
+```
 pip install pgvector
+```
+
+### Getting Started 🚀
+
+1. **Enable pgvector Extension** 📦
+
+Once pgvector is installed, you can enable it in your Postgres database by creating the extension:
+
+   ```
+   CREATE EXTENSION vector;
+   ```
+
+2. **Create a Table** 🗄️
+
+Create a table to store your vectors:
+
+```
+CREATE TABLE items (
+  id bigserial PRIMARY KEY,
+  embedding vector(3));
+```
+
+
+3. **Generate and Store Embeddings** 🧬
+
+An embedding is a vector (list) of floating-point numbers. The distance between two vectors measures their relatedness. Small distances suggest high relatedness, and large distances suggest low relatedness.
+
+To insert embeddings into your table, use:
+```
+INSERT INTO items (embedding) VALUES ('[1,2,3]'), ('[4,5,6]');
+```
+
+4. **Querying Embeddings** 🔍
+
+Query to find the top 5 items most similar to a given vector:
+
+```
+SELECT * FROM items ORDER BY embedding <-> '[3,1,2]' LIMIT 5;
+```
+
+
+
+
+
+
